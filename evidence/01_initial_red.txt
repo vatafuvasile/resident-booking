@@ -1,0 +1,36 @@
+UTC timestamp: 2026-11-02T23:11:10.734749+00:00
+Base commit: 30a35598e9eb4031b3af2df5ff4963e3e67b70b5
+Working tree at execution:
+
+Command: python -m behave --no-color --format plain
+USING RUNNER: behave.runner:Runner
+Feature: Book a resident support appointment
+  Background: 
+
+  Scenario: Confirm an available future appointment
+    Given the service clock is "2026-11-02T09:00:00+00:00" ... passed in 0.000s
+    And the council offers "2026-11-03T10:00:00+00:00" ... passed in 0.000s
+    When resident "R001" requests "2026-11-03T10:00:00+00:00" ... error in 0.000s
+Traceback (most recent call last):
+  File "/Users/vasilevatafu/Documents/ChatGPT/Assessment November 2026/.venv/lib/python3.12/site-packages/behave/model.py", line 1991, in run
+    match.run(runner.context)
+  File "/Users/vasilevatafu/Documents/ChatGPT/Assessment November 2026/.venv/lib/python3.12/site-packages/behave/matchers.py", line 105, in run
+    self.func(context, *args, **kwargs)
+  File "features/steps/appointment_steps.py", line 26, in request_booking
+    context.booking = context.service.book(resident, slot)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vasilevatafu/Documents/ChatGPT/Assessment November 2026/resident-booking/booking.py", line 24, in book
+    raise NotImplementedError("Booking behaviour not implemented yet")
+NotImplementedError: Booking behaviour not implemented yet
+
+
+
+Errored scenarios:
+  features/appointments.feature:10  Confirm an available future appointment
+
+0 features passed, 0 failed, 1 error, 0 skipped
+0 scenarios passed, 0 failed, 1 error, 0 skipped
+2 steps passed, 0 failed, 1 error, 3 skipped
+Took 0min 0.000s
+
+Exit code: 1

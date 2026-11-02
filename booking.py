@@ -21,4 +21,7 @@ class BookingService:
         return tuple(self._bookings.values())
 
     def book(self, resident_id, slot_text):
-        raise NotImplementedError("Booking behaviour not implemented yet")
+        slot = datetime.fromisoformat(slot_text)
+        booking = Booking(f"B{len(self._bookings) + 1:04d}", resident_id, slot)
+        self._bookings[slot] = booking
+        return booking
