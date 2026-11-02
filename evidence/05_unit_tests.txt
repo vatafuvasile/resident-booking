@@ -1,0 +1,31 @@
+UTC timestamp: 2026-11-02T23:11:53.472140+00:00
+Base commit: 1d0f388acb0dd2e75d539e1fd21468f80765f608
+Working tree at execution:
+M booking.py
+?? demo.py
+?? evidence/04_validation_green.txt
+?? tests/
+Command: python -m unittest discover -s tests -v
+test_blank_identifier (test_booking.BookingTests.test_blank_identifier) ... ok
+test_duplicate_preserves_original (test_booking.BookingTests.test_duplicate_preserves_original) ... ok
+test_equivalent_offsets_cannot_double_book (test_booking.BookingTests.test_equivalent_offsets_cannot_double_book) ... ok
+test_exact_now_is_rejected (test_booking.BookingTests.test_exact_now_is_rejected) ... ok
+test_identifier_length_boundary (test_booking.BookingTests.test_identifier_length_boundary) ... ok
+test_identifier_with_control_character (test_booking.BookingTests.test_identifier_with_control_character) ... ok
+test_malformed_date (test_booking.BookingTests.test_malformed_date) ... ok
+test_missing_offset (test_booking.BookingTests.test_missing_offset) ... ok
+test_naive_configured_slot_is_rejected (test_booking.BookingTests.test_naive_configured_slot_is_rejected) ... ok
+test_naive_service_clock_is_rejected (test_booking.BookingTests.test_naive_service_clock_is_rejected) ... ok
+test_non_string_date (test_booking.BookingTests.test_non_string_date) ... ok
+test_non_string_identifier (test_booking.BookingTests.test_non_string_identifier) ... ok
+test_past_date (test_booking.BookingTests.test_past_date) ... ok
+test_state_is_isolated_between_instances (test_booking.BookingTests.test_state_is_isolated_between_instances) ... ok
+test_success_stores_matching_details (test_booking.BookingTests.test_success_stores_matching_details) ... ok
+test_unoffered_slot (test_booking.BookingTests.test_unoffered_slot) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.001s
+
+OK
+
+Exit code: 0

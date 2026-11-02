@@ -1,0 +1,16 @@
+UTC timestamp: 2026-11-02T23:11:53.591055+00:00
+Base commit: 1d0f388acb0dd2e75d539e1fd21468f80765f608
+Working tree at execution:
+M booking.py
+?? demo.py
+?? evidence/04_validation_green.txt
+?? evidence/05_unit_tests.txt
+?? tests/
+Command: python demo.py
+Demonstration clock: 2 November 2026 at 09:00 UTC
+R001: confirmed B0001 at 2026-11-03T10:00:00+00:00
+R002: That appointment is already booked
+R003: Enter an ISO 8601 date and time with a UTC offset
+Stored bookings: 1
+
+Exit code: 0
