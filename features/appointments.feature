@@ -12,3 +12,15 @@ Feature: Book a resident support appointment
     Then the result is "confirmed"
     And there are 1 stored bookings
     And the stored appointment belongs to "R001"
+
+  Scenario: Reject a malformed appointment date
+    When resident "R001" requests "not-a-date"
+    Then the result is "Enter an ISO 8601 date and time with a UTC offset"
+    And there are 0 stored bookings
+
+  Scenario: Preserve an existing reservation when a slot is taken
+    Given resident "R001" has booked "2026-11-03T10:00:00+00:00"
+    When resident "R002" requests "2026-11-03T10:00:00+00:00"
+    Then the result is "That appointment is already booked"
+    And there are 1 stored bookings
+    And the stored appointment belongs to "R001"
